@@ -1,0 +1,19 @@
+@import "utils/fonts.scss";
+@import "../components/logo/logo.scss";
+
+* {
+  box-sizing: border-box;
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-family: "Montserrat", "Quicksand", "sans-serif";
+  font-size: 100%;
+}
+
+body {
+  background-color: #e5e5e5;
+}

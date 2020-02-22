@@ -1,0 +1,29 @@
+
+
+mixin logo(options)
+  -
+    var logoClassName = "logo__box"
+    logoClassName += options.isUIkit ? " logo_syle_UI-kit" : ""
+    var arcClassName = "logo__arc-right"
+    arcClassName += options.isUIkit ? " logo_syle_UI-kit" : ""
+    var textClassName = "logo__text"
+    textClassName += options.isUIkit ? " logo_text-hidden" : ""
+  .logo
+    svg(class = logoClassName, viewbox='0 0 100 100')
+      defs
+        lineargradient#gradient-purple(x1='0%', y1='0%', x2='0%', y2='100%')
+          stop(offset='0%', stop-color='#BC9CFF')
+          stop(offset='100%', stop-color='#8BA4F9')
+        lineargradient#gradient-green(x1='0%', y1='0%', x2='0%', y2='100%')
+          stop(offset='0%', stop-color='#6FCF97')
+          stop(offset='100%', stop-color='#66D2EA')
+        mask#mask
+          rect.logo__mask-squared
+          circle.logo__mask-circle
+      circle.logo__circle
+      circle.logo__arc-left
+      circle(class=arcClassName, mask='url(#mask)')
+    div(class = textClassName)
+      .logo__text-line1
+      .logo__text-line2
+      .logo__text-line3

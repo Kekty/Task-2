@@ -1,0 +1,177 @@
+$d: 40px; //тут меняем величину
+$diameter: 100%-100%/17;
+$tol: $diameter/17;
+
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.logo__box {
+  display: block;
+  width: $d;
+  height: $d;
+  fill: none;
+  stroke: url(#gradient-purple);
+  stroke-width: $tol;
+  stroke-linecap: round;
+}
+
+.logo__circle {
+  cx: 50%;
+  cy: 50%;
+  r: $diameter / 2;
+}
+
+.logo__arc-left {
+  cx: 26.5%;
+  cy: 65%;
+  stroke-dasharray: 40 150;
+  stroke-dashoffset: 80;
+  r: $diameter / 4;
+}
+
+.logo__arc-right {
+  cx: 73.5%;
+  cy: 65%;
+  stroke: url(#gradient-green);
+  stroke-dasharray: 22 150;
+  stroke-dashoffset: 83;
+  r: $diameter / 4;
+}
+
+.logo__mask-circle {
+  fill: black;
+  stroke: #000;
+  cx: 31%;
+  cy: 61%;
+  r: $diameter / 4;
+}
+.logo__mask-squared {
+  width: 100%;
+  height: 100%;
+  fill: white;
+}
+
+$h: 12.95px;
+$w: $h/7.75;
+$col: #1f2041;
+// $col: rgba(31, 32, 65, 0.55);
+
+.logo__text {
+  width: $h * 4.14;
+  height: $h;
+  position: relative;
+  margin-left: 12.5px;
+}
+
+// vertical lines
+.logo__text-line1 {
+  position: absolute;
+  left: 8.25%;
+  width: $w;
+  height: $h;
+  background: $col;
+  border-radius: 50px;
+  box-shadow: $h * 2.64 0 0 0 $col, $h * 2.99 0 0 0 $col, $h * 3.67 0 0 0 $col;
+}
+
+//line in circle
+.logo__text-line1:before {
+  content: "";
+  position: absolute;
+  left: 655%;
+  top: 0%;
+  width: $w;
+  height: $h;
+  background: $col;
+  border-radius: 50px;
+  transform: rotate(-40deg);
+}
+
+//circle
+.logo__text-line1:after {
+  content: "";
+  position: absolute;
+  left: 330%;
+  top: 0%;
+  width: $h;
+  height: $h;
+  background: none;
+  border: $h/6.5 solid $col;
+  border-radius: 50%;
+}
+
+// rotated lines
+.logo__text-line2 {
+  position: absolute;
+  left: 54.5%;
+  top: -12%;
+  width: $w;
+  height: $h * 1.23;
+  background: $col;
+  border-radius: 50px;
+  transform: rotate(-38.5deg);
+}
+//X
+.logo__text-line2:before {
+  content: "";
+  position: absolute;
+  width: $w;
+  height: $h * 1.23;
+  background: $col;
+  border-radius: 50px;
+  transform: rotate(77deg);
+}
+//N
+.logo__text-line2:after {
+  content: "";
+  position: absolute;
+  left: 860%;
+  top: 73%;
+  width: $h/7.5;
+  height: $h * 1.2;
+  background: $col;
+  border-radius: 50px;
+  transform: rotate(1deg);
+}
+//horizontal lines
+.logo__text-line3 {
+  position: absolute;
+  left: 8.5%;
+  top: -36%;
+  width: $w;
+  height: $h * 0.83;
+  background: $col;
+  border-radius: 50px;
+  transform: rotate(90deg);
+}
+//tail of X
+.logo__text-line3::before {
+  content: "";
+  position: absolute;
+  left: 690%;
+  top: -232%;
+  width: $h/9;
+  height: $h/7.5;
+  background: $col;
+  border-radius: 50px;
+}
+
+.logo_text-hidden {
+  display: none;
+}
+.logo_syle_UI-kit {
+  stroke: rgba(31, 32, 65, 0.25);
+  width: 48px;
+  height: 48px;
+}
+
+* {
+  box-sizing: border-box;
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
