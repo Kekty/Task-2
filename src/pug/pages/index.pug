@@ -1,6 +1,7 @@
 extends ../layout/main
 
 include ../../components/logo/logo
+include ../../components/button/button
 
 block variables
   - var title = 'Task 2'
@@ -9,5 +10,6 @@ block content
   section
     .conteiner
       +logo({})
+      +button({text:"login",isSizeM:true})
 
 

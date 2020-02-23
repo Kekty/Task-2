@@ -1,0 +1,58 @@
+//color menu button
+.button {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 22px;
+  padding: 9px 20px 10px 19px;
+  background: $gradient-purple;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  // white menu button
+  &_theme_transparent {
+    border-radius: 22px;
+    padding: 7px 18px 8px 18px;
+    color: #bc9cff;
+    border: solid 2px transparent;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0)
+      ),
+      $gradient-purple;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
+  }
+
+  &_size_M {
+    width: 320px;
+    height: 44px;
+  }
+
+  &_size_S {
+    width: 99px;
+    height: 44px;
+    color: #ffffff;
+  }
+
+  &__icon:before {
+    content: "arrow_forward";
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}

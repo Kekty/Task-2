@@ -1,0 +1,10 @@
+mixin button(options)
+  -
+    var buttonClassName = "button"
+    var iconClassName = "material-icons"
+    buttonClassName += options.isTransparent ? " button_theme_transparent" : ""
+    buttonClassName += options.isSizeM ? " button_size_M" : options.isSizeS ? " button_size_S" : ""
+    iconClassName += options.isSizeM ? " button__icon" : ""
+  button(class = buttonClassName type= "submit")
+    |#{options.text}
+    i(class = iconClassName)
