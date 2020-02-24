@@ -1,3 +1,7 @@
+include ../../components/logo/logo
+include ../../components/button/button
+include ../../components/menu/menu
+
 mixin header(options)
   .header
     .header__container
@@ -11,4 +15,4 @@ mixin header(options)
             +button({text:"register"})
         else
           .header__user
-            a.header__user-link(href="uikit.html" target="_blank") #{options.user}
+            a.header__user-link(href="UIkit.html" target="_blank") #{options.user}

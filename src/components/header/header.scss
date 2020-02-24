@@ -1,4 +1,4 @@
-@import "../components/logo/logo.scss"; //правильный путь?
+@import "../components/logo/logo.scss";
 @import "../components/button/button.scss";
 @import "../components/menu/menu.scss";
 
@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.46rem 0;
+    padding: 0.9375rem 0;
     margin: 0 auto;
     max-width: 72.5rem;
     flex-wrap: wrap;
@@ -33,13 +33,13 @@
 
   &__button1 {
     margin-right: 20px;
-    margin-left: 5px;
+    margin-left: -1px;
   }
 
   &__user {
     border-left: solid 1px rgba(31, 32, 65, 0.1);
     padding: 6px 0px 6px 30px;
-    margin-left: 7px;
+    margin-left: 3px;
   }
 
   &__user-link {

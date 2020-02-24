@@ -1,10 +1,7 @@
 @import "utils/reset.scss";
 @import "utils/fonts.scss";
 @import "utils/vars.scss";
-@import "../components/header/header.scss";
-// @import "../components/logo/logo.scss";
-// @import "../components/button/button.scss";
-// @import "../components/menu/menu.scss";
+@import "../components/pages/UIkit/UIkit.scss";
 
 html {
   font-family: "Montserrat", "Quicksand", "sans-serif";

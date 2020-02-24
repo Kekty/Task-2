@@ -1,0 +1,9 @@
+@import "../components/header/header.scss";
+
+.UIkit__header {
+  margin-bottom: 40px;
+}
+
+.UIkit__header:nth-child(2) .header {
+  z-index: 0;
+}
