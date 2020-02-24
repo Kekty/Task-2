@@ -1,0 +1,20 @@
+mixin navbar(menus, UIkit, footer, user)
+    ul.menu
+      for menu in menus
+        li(class =`${footer ? '' : 'menu__item' } ${user ? 'menu__item_UIkit' : '' }`)
+          -
+            var linkClassName = "menu__link"
+            linkClassName += !footer ? "" : " menu__link_footer"
+            linkClassName += menu.isActive ? footer ? " menu_active menu_active_footer" : " menu_active" : ""
+            linkClassName += UIkit ? " menu__link_UIkit" : ""
+          a(class=linkClassName, href=menu.address, title=menu.address)=menu.title
+            if typeof menu.child == typeof []
+              if menu.child.length > 0
+                if !footer
+                  i.material-icons.menu__icon="expand_more"
+          if typeof menu.child == typeof []
+            if menu.child.length > 0
+              ul.menu__submenu
+                for submenu in menu.child
+                  li
+                    a.menu__link(href=submenu.address, title=submenu.address)=submenu.title

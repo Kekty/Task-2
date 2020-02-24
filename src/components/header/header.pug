@@ -1,0 +1,14 @@
+mixin header(options)
+  .header
+    .header__container
+      +logo({})
+      .header__nav-block
+        +navbar(menu, options.UIkit, options.footer, options.user)
+        if !options.user
+          .header__buttons
+            .header__button1
+              +button({text:"login",isTransparent:true})
+            +button({text:"register"})
+        else
+          .header__user
+            a.header__user-link(href="uikit.html" target="_blank") #{options.user}

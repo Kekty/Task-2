@@ -1,0 +1,74 @@
+.menu {
+  padding-top: 3px;
+  list-style: none;
+
+  &__item {
+    list-style: none;
+    display: inline-block;
+    margin-right: 26px;
+    &_UIkit {
+      margin-right: 24px;
+    }
+  }
+
+  &__link {
+    font-family: Montserrat, verdana;
+    text-transform: capitalize;
+    color: $dark50;
+    text-decoration: none;
+    position: relative;
+    font-size: 0.875rem;
+    line-height: 17px;
+
+    &_UIkit {
+      font-size: 13.5px;
+    }
+  }
+
+  &__link:hover,
+  &__link:active {
+    color: $dark75;
+  }
+
+  &__submenu {
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+    border-radius: 5px;
+    border: 1px solid $dark50;
+    transition: 0.3s;
+    padding: 10px;
+    line-height: 25px;
+    list-style: none;
+    background: #fff;
+  }
+
+  &__item:hover &__submenu {
+    visibility: visible;
+  }
+
+  &__icon {
+    font-style: bold;
+    vertical-align: top;
+    margin-right: -10px;
+    margin-top: -1px;
+  }
+
+  &_active {
+    font-weight: 900;
+    color: $dark75;
+  }
+
+  &__link_footer {
+    display: block;
+    margin-top: 21px;
+  }
+
+  &_active_footer {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: none;
+  }
+}

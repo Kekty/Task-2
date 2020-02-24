@@ -1,0 +1,16 @@
+extends ../layout/main
+
+include ../../components/logo/logo
+include ../../components/button/button
+include ../../components/menu/menu
+
+block variables
+  - var title = 'UI kit'
+
+block content
+  section
+    .conteiner
+      +logo({})
+      +button({text:"login",isSizeM:true})
+      -var menu = [{title:'Navigation',address:'#', isActive:true},{title:'About us',address:'#'},{title:'News',address:'#',child:[{title:'link',address:'#'},{title:'link',address:'#'},{title:'link',address:'#'}]},{title:'Support',address:'#'},{title:'Products',address:'#'},{title:'Documentation',address:'#'}]
+      +navbar(menu)
