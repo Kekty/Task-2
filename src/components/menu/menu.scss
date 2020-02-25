@@ -17,7 +17,7 @@
     color: $dark50;
     text-decoration: none;
     position: relative;
-    font-size: 0.875rem;
+    font-size: 14px;
     line-height: 17px;
 
     // &_UIkit {
@@ -41,7 +41,7 @@
     line-height: 25px;
     list-style: none;
     background: #fff;
-    z-index:100;
+    z-index: 100;
   }
 
   &__item:hover &__submenu {
@@ -62,14 +62,15 @@
 
   &__link_footer {
     display: block;
-    margin-top: 21px;
+    margin-bottom: 21px;
   }
 
   &_active_footer {
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     margin-top: none;
+    color: $dark100;
   }
 }

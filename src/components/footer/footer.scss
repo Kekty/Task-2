@@ -1,3 +1,119 @@
 @import "../components/subscription/subscription.scss";
 @import "../components/logo/logo.scss";
 @import "../components/menu/menu.scss";
+
+.footer {
+  box-shadow: 0 1px 0 rgba(31, 32, 65, 0.1);
+  background-color: #fff;
+  font-family: Montserrat, Open Sans, "sans-serif";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+
+  &__container {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    padding: 100px 0 80px;
+    justify-content: space-between;
+  }
+  &__box-descr {
+    width: 22.4%;
+  }
+  &__descr {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+    margin-top: 17px;
+  }
+  &__menu {
+    display: flex;
+    margin-top: 1px;
+    flex-grow: 1;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__block-menu:first-child {
+    margin-left: 0;
+    margin-right: 6%;
+  }
+
+  &__block-menu:nth-child(2) {
+    margin-left: 0;
+    margin-right: 5.5%;
+  }
+
+  &__block-menu:nth-child(3) {
+    margin-left: 0;
+    margin-right: 7.2%;
+  }
+
+  &__box-subscr {
+    max-width: 260px;
+    margin-top: 4px;
+  }
+  &__subscr-heading {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 19px;
+    color: $dark100;
+  }
+
+  &__subscr-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 22px;
+  }
+
+  &__copyright {
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    margin-top: 1px;
+    background: #fff;
+
+    &-box {
+      max-width: 1160px;
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-between;
+      padding: 24px 0;
+    }
+
+    &-text {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      color: $dark75;
+      padding-top: 3px;
+    }
+
+    &-social {
+      display: flex;
+    }
+  }
+  &__social-link .fab {
+    font-family: "Font Awesome 5 Brands";
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-fill-color: transparent;
+    font-size: 24px;
+    line-height: 23px;
+    margin-left: 23px;
+  }
+  &__social-link:nth-child(3) {
+    margin-right: 1px;
+  }
+}

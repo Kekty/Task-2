@@ -3,4 +3,24 @@ include ../../components/logo/logo
 include ../../components/menu/menu
 
 mixin footer(options)
+  footer.footer
+    .footer__container
+      .footer__box-descr
+        +logo({})
+        .footer__descr=options.descr
+      nav.footer__menu
+        each value in [options.footerMenu1, options.footerMenu2, options.footerMenu3]
+          .footer__block-menu
+            +navbar(value, UIkit=false, footer=true)
+      .footer__box-subscr
+        .footer__subscr-heading=options.subscr
+        .footer__subscr-text=options.subscrText
+        +subscription(options.placeholder)
+  .footer__copyright
+    .footer__copyright-box
+      .footer__copyright-text=options.copyrightText
+      .footer__copyright-social
+        each value, index in {'https://twitter.com/': 'fab fa-twitter', 'https://www.facebook.com/': 'fab fa-facebook-square', 'https://www.instagram.com/': 'fab fa-instagram'}
+          a.footer__social-link(href=index)
+            i(class=value)
   

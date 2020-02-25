@@ -3,18 +3,18 @@
 @import "../components/menu/menu.scss";
 
 .header {
-  box-shadow: 0rem 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
+  box-shadow: 0rem 10px 20px rgba(31, 32, 65, 0.05);
   position: relative;
-  background-color: #fff;
+  background-color: rgb(83, 60, 60);
   z-index: 3;
 
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.9375rem 0;
+    padding: 15px 0;
     margin: 0 auto;
-    max-width: 72.5rem;
+    max-width: 1160px;
     flex-wrap: wrap;
     // background:grey;
   }
@@ -28,7 +28,6 @@
   &__buttons {
     display: flex;
     flex-wrap: wrap;
-    // margin-right: 1.875rem;
   }
 
   &__button1 {
