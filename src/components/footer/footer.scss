@@ -3,13 +3,13 @@
 @import "../components/menu/menu.scss";
 
 .footer {
-  box-shadow: 0 1px 0 rgba(31, 32, 65, 0.1);
+  box-shadow: 0 1px 0 $dark10;
   background-color: #fff;
   font-family: Montserrat, Open Sans, "sans-serif";
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
+  color: $dark75;
 
   &__container {
     max-width: 1160px;
@@ -18,16 +18,19 @@
     padding: 100px 0 80px;
     justify-content: space-between;
   }
-  &__box-descr {
-    width: 22.4%;
-  }
+
   &__descr {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-    color: rgba(31, 32, 65, 0.75);
-    margin-top: 17px;
+    &-text {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      color: $dark75;
+      margin-top: 17px;
+    }
+    &-box {
+      width: 22.4%;
+    }
   }
   &__menu {
     display: flex;
@@ -35,47 +38,61 @@
     flex-grow: 1;
     justify-content: space-around;
     flex-wrap: wrap;
+
+    &-block {
+      &:first-child {
+        margin-left: 3.2%;
+        margin-right: 3%;
+      }
+
+      &:nth-child(2) {
+        margin-right: 8.4%;
+      }
+
+      &:nth-child(3) {
+        margin-right: 5.1%;
+      }
+      &_UIkit {
+        &:first-child {
+          margin-left: 0;
+          margin-right: 6%;
+        }
+        &:nth-child(2) {
+          margin-right: 5.7%;
+        }
+        &:nth-child(3) {
+          margin-right: 7.4%;
+        }
+      }
+    }
   }
 
-  &__block-menu:first-child {
-    margin-left: 0;
-    margin-right: 6%;
-  }
+  &__subscr {
+    &-box {
+      max-width: 260px;
+      margin-top: 4px;
+    }
+    &-heading {
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      margin-bottom: 18px;
+      color: $dark100;
+    }
 
-  &__block-menu:nth-child(2) {
-    margin-left: 0;
-    margin-right: 5.5%;
-  }
-
-  &__block-menu:nth-child(3) {
-    margin-left: 0;
-    margin-right: 7.2%;
-  }
-
-  &__box-subscr {
-    max-width: 260px;
-    margin-top: 4px;
-  }
-  &__subscr-heading {
-    text-transform: uppercase;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    margin-bottom: 19px;
-    color: $dark100;
-  }
-
-  &__subscr-text {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-    margin-bottom: 22px;
+    &-text {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 23px;
+    }
   }
 
   &__copyright {
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    box-shadow: 0px 10px 20px $dark5;
     margin-top: 1px;
     background: #fff;
 
@@ -98,22 +115,23 @@
 
     &-social {
       display: flex;
+
+      &-link .fab {
+        font-family: "Font Awesome 5 Brands";
+        background: $gradient-purple;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        text-fill-color: transparent;
+        font-size: 24px;
+        line-height: 23px;
+        margin-left: 23px;
+      }
+      &-link:nth-child(3) {
+        margin-right: 1px;
+      }
     }
-  }
-  &__social-link .fab {
-    font-family: "Font Awesome 5 Brands";
-    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    text-fill-color: transparent;
-    font-size: 24px;
-    line-height: 23px;
-    margin-left: 23px;
-  }
-  &__social-link:nth-child(3) {
-    margin-right: 1px;
   }
 }

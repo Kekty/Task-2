@@ -20,16 +20,30 @@
     font-size: 14px;
     line-height: 17px;
 
-    // &_UIkit {
-    //   font-size: 14px;
-    // }
-  }
+    &:hover,
+    &:active {
+      color: $dark75;
+    }
 
-  &__link:hover,
-  &__link:active {
-    color: $dark75;
-  }
+    &_footer {
+      display: block;
+      margin-bottom: 21px;
+      text-transform: none;
+    }
+    &_active {
+      font-weight: bold;
+      color: $dark75;
 
+      &_footer {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        margin-top: none;
+        color: $dark100;
+      }
+    }
+  }
   &__submenu {
     position: absolute;
     visibility: hidden;
@@ -53,24 +67,5 @@
     vertical-align: top;
     margin-right: -10px;
     margin-top: -1px;
-  }
-
-  &_active {
-    font-weight: bold;
-    color: $dark75;
-  }
-
-  &__link_footer {
-    display: block;
-    margin-bottom: 21px;
-  }
-
-  &_active_footer {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    margin-top: none;
-    color: $dark100;
   }
 }

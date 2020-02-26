@@ -2,6 +2,7 @@ extends ../layout/main
 
 include ../../components/header/header
 include ../../components/footer/footer
+include ../../components/footerCreative/footerCreative
 
 block variables
   - var title = 'UI kit'
@@ -14,4 +15,16 @@ block content
         +header({UIkit:true})
       .UIkit__header
         +header({user:"Cosmin Negoita",UIkit:true})
-      +footer({descr:"Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",footerMenu1 : [{title:'Navigation',address:'#', isActive:true},{title:'About Us',address:'#'},{title:'News',address:'#'},{title:'Support',address:'#'},{title:'Products',address:'#'}],footerMenu2 : [{title:'ABOUT US',address:'#', isActive:true},{title:'Who we are',address:'#'},{title:'Our team',address:'#'},{title:'Careers',address:'#'},{title:'Investors',address:'#'}], footerMenu3 : [{title:'Support',address:'#', isActive:true},{title:'Documentation',address:'#'},{title:'Community',address:'#'},{title:'Get in Touch',address:'#'}], subscr:"Subscribe to our newsletter", subscrText:"Receive our latest news and promotions in your inbox!", placeholder:"Your email address", copyrightText:"Copyright © 2018 Toxin UI Kit. All rights reserved."})
+      +footer({descr:"Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
+      footerMenu1 : [{title:'Navigation',address:'#', isActive:true},
+      {title:'About Us',address:'#'},{title:'News',address:'#'},
+      {title:'Support',address:'#'},{title:'Products',address:'#'}],
+      footerMenu2 : [{title:'ABOUT US',address:'#', isActive:true},
+      {title:'Who we are',address:'#'},{title:'Our team',address:'#'},
+      {title:'Careers',address:'#'},{title:'Investors',address:'#'}], 
+      footerMenu3 : [{title:'Support',address:'#', isActive:true},
+      {title:'Documentation',address:'#'},{title:'Community',address:'#'},
+      {title:'Get in Touch',address:'#'}], subscr:"Subscribe to our newsletter",
+       subscrText:"Receive our latest news and promotions in your inbox!", 
+       placeholder:"Your email address", copyrightText:"Copyright © 2018 Toxin UI Kit. All rights reserved.", UIkit:true})
+      +footerCreative({descr:"Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."}) 

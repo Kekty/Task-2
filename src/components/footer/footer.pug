@@ -5,14 +5,14 @@ include ../../components/menu/menu
 mixin footer(options)
   footer.footer
     .footer__container
-      .footer__box-descr
+      .footer__descr-box
         +logo({})
-        .footer__descr=options.descr
+        .footer__descr-text=options.descr
       nav.footer__menu
         each value in [options.footerMenu1, options.footerMenu2, options.footerMenu3]
-          .footer__block-menu
+          .footer__menu-block(class= `${options.UIkit ? 'footer__menu-block_UIkit' : ''}`)
             +navbar(value, UIkit=false, footer=true)
-      .footer__box-subscr
+      .footer__subscr-box
         .footer__subscr-heading=options.subscr
         .footer__subscr-text=options.subscrText
         +subscription(options.placeholder)
@@ -21,6 +21,6 @@ mixin footer(options)
       .footer__copyright-text=options.copyrightText
       .footer__copyright-social
         each value, index in {'https://twitter.com/': 'fab fa-twitter', 'https://www.facebook.com/': 'fab fa-facebook-square', 'https://www.instagram.com/': 'fab fa-instagram'}
-          a.footer__social-link(href=index)
+          a.footer__copyright-social-link(href=index)
             i(class=value)
   

@@ -1,0 +1,10 @@
+mixin footerCreative(options)
+  footer.footerCreative
+    .footerCreative__box
+      .footerCreative__logo
+        +logo({})
+      .footerCreative__descr=options.descr
+      .footerCreative__social
+        each value, index in {'https://twitter.com/': 'fab fa-twitter', 'https://www.facebook.com/': 'fab fa-facebook-square', 'https://www.instagram.com/': 'fab fa-instagram'}
+          a.footerCreative__social-link(href=index)
+            i(class=value)

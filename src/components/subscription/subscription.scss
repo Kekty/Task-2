@@ -3,21 +3,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 16.6875rem;
+    max-width: 267px;
     width: 100%;
-    padding: 0.5rem 0.1875rem 0.5rem 0.875rem;
-    border: 0.0625rem solid rgba(31, 32, 65, 0.25);
-    border-radius: 0.25rem;
+    padding: 8px 3px 8px 14px;
+    border: 1px solid $dark25;
+    border-radius: 4px;
     outline: none;
     font-family: Montserrat, Open Sans, "sans-serif";
     font-weight: 400;
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    color: rgba(31, 32, 65, 0.75);
+    font-size: 14px;
+    line-height: 24px;
+    color: $dark75;
 
     &:hover,
     &:focus {
-      border: 0.0625rem solid rgba(31, 32, 65, 0.5);
+      border: 1px solid $dark50;
     }
   }
   &__input {
@@ -32,7 +32,7 @@
     outline: none;
 
     &::placeholder {
-      color: rgba(31, 32, 65, 0.25);
+      color: $dark25;
     }
   }
 
@@ -57,7 +57,7 @@
     // white-space: nowrap;
     // word-wrap: normal;
     // direction: ltr;
-    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    background: $gradient-purple;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
